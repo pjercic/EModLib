@@ -8,6 +8,8 @@
 #include "EmotionsModelLib.h"
 #include "IPerson.h"
 
+#include <algorithm>
+
 namespace EmotionsModel {
 
 EmotionsModelLib::EmotionsModelLib() {
@@ -42,12 +44,23 @@ int EmotionsModelLib::createPerson(PersonLabel type) {
 	return mPersons.size() - 1;
 }
 
-void EmotionsModelLib::run() {
+void EmotionsModelLib::Start() {
 
-	for (auto person : mPersons) {
-
-		person->mAffect->run(person->mAffect->GetArousal(), person->mAffect->GetValence());
+	for (auto person : mPersons)
+	{
+		mPersonAffectThreadList.push_back (std::thread (&IPerson::Run, person));
 	}
+
+	std::for_each(mPersonAffectThreadList.begin(), mPersonAffectThreadList.end(), std::mem_fn(&std::thread::join));
+}
+
+void EmotionsModelLib::Stop() {
+
+	for (auto person : mPersons)
+	{
+		person->isRunning = false;
+	}
+
 }
 
 } /* namespace EmotionsModel */

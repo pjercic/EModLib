@@ -37,20 +37,41 @@ public:
 	
 	virtual void inStimulus(stimulus* stimulus) = 0;
 
-	virtual void run(double arousal, double valence) {
+	virtual void run(IAffect* affect) {
 
 		for (auto& stimulus : mStimuli) {
 
-			mArousal += 0.1 * (stimulus->mArousal - mArousal);
-			mValence += 0.1 * (stimulus->mValence - mValence);
+			mArousal += lerpSlow(mArousal, stimulus->mArousal, mAffectAdjustmentFactor);
+			mValence += lerpSlow(mValence, stimulus->mValence, mAffectAdjustmentFactor);
 		}
 
-			mArousal += 0.1 * (arousal - mArousal);
-			mValence += 0.1 * (valence - mValence);
+		if (affect != nullptr)
+		{
+			mArousal += lerpSlow(mArousal, affect->GetArousal(), mAffectAdjustmentFactor);
+			mValence += lerpSlow(mValence, affect->GetValence(), mAffectAdjustmentFactor);
 
-		if (mAffectiveObjectDriven)
-			mAffectiveObjectDriven->run(arousal, valence);
+			mAffectiveObjectDriven->run(affect);
+		}
+		else
+		{
+			mArousal += lerpSlow(mArousal, GetArousal(), mAffectAdjustmentFactor);
+			mValence += lerpSlow(mValence, GetValence(), mAffectAdjustmentFactor);
+
+			mAffectiveObjectDriven->run(this);
+		}
 	};
+
+	template <typename T>
+		inline T lerpSlow(T v0, T v1, T t) {
+		// (1-t)*v0 + t*v1
+		return (1 - t)*v0 + t * v1;
+	}
+
+	template <typename T>
+		inline T lerpFast(T v0, T v1, T t) {
+		//fma(t, v1, fma(-t, v0, v0))
+		return fma(t, v1, fma(-t, v0, v0));
+	}
 
 	virtual ~IAffect() { delete mAffectiveObjectDriven;}; // implemented base class destructor that always gets called.
 };

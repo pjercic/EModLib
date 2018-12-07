@@ -13,6 +13,8 @@
 #define _USE_MATH_DEFINES
 
 #include <cmath>
+#include <chrono>
+#include <thread>
 
 #ifndef M_PI
 	#define M_PI 3.14159265358979323846
@@ -31,17 +33,19 @@ public:
 	IAffect* mAffect;
 	EmotionLabel mEmotionLabel;
 	int mLocation;
+	bool isRunning;
 
-	IPerson() : mAffect(0), mEmotionLabel(EmotionLabel::None), mLocation(0) {}; // empty constructor to build an independent object
+	IPerson() : mAffect(0), mEmotionLabel(EmotionLabel::None), mLocation(0), isRunning(false) {}; // empty constructor to build an independent object
 	virtual ~IPerson() { delete mAffect; }; // implemented base class destructor that always gets called
 
-	virtual void inStimulus (stimulus* stimulus){
-
+	virtual void inStimulus (stimulus* stimulus)
+	{
 		if (mAffect)
 				mAffect->inStimulus(stimulus);
 	};
-	virtual EmotionLabel getEmotion() {
-	
+
+	virtual EmotionLabel getEmotion() 
+	{
 		// Math function that separates affective circle on N equal pieces, where N is the number of emotions
 		double rotAffClass = M_PI/8; // Rotate the circle so the first emotional class fits to the beginning  of the affective circle
 		double affRad = atan2(mAffect->GetArousal(), mAffect->GetValence()); // Get corrected radians of the interest point
@@ -51,7 +55,25 @@ public:
 		mEmotionLabel = (EmotionLabel)emoClass;
 		return mEmotionLabel;
 	};
+
 	virtual IAffect* getAffect() { return mAffect; };
+
+	virtual void Run()
+	{
+		isRunning = true;
+		auto previousTime = std::chrono::high_resolution_clock::now();
+
+		while (isRunning) 
+		{
+			mAffect->run(nullptr);
+
+			std::chrono::duration<double, std::milli> deltaTime = std::chrono::milliseconds(1000) - (std::chrono::high_resolution_clock::now() - previousTime);
+			
+			std::this_thread::sleep_for(deltaTime);
+
+			previousTime = std::chrono::high_resolution_clock::now();
+		}
+	}
 };
 
 } /* namespace EmotionsModel */

@@ -9,6 +9,8 @@
 #define EMOTIONSMODELLIB_H_
 
 #include <vector>
+#include <thread>
+
 #include "IPerson.h"
 #include "IAffect.h"
 #include "stimulus.h"
@@ -23,6 +25,7 @@ class EmotionsModelLib {
 
 	private:
 		std::vector<IPerson*> mPersons;
+		std::vector<std::thread> mPersonAffectThreadList;
 
 	public:
 		EmotionsModelLib();
@@ -32,7 +35,8 @@ class EmotionsModelLib {
 		EmotionLabel getEmotion(int persId);
 		IAffect* getAffect(int persId);
 		int createPerson(PersonLabel type); // implement if want to keep record of all persons
-		void run();
+		void Start();
+		void Stop();
 	};
 
 } /* namespace EmotionsModel */
