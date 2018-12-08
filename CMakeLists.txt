@@ -18,6 +18,7 @@ set( HEADERS include/IAffect.h include/IPerson.h include/stimulus.h include/Affe
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 add_library(libEModLib SHARED ${SOURCES} ${HEADERS} )
+ADD_SUBDIRECTORY( console_app )
 
 # If you work with subdirectories, it is not very convenient to include relative path like "../include/mylib.h". So, pass top directory in included directories:
 target_include_directories(libEModLib PRIVATE include)
