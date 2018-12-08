@@ -6,6 +6,8 @@ cmake_minimum_required(VERSION 3.0.0)
 cmake_minimum_required(VERSION 3.10)
 project(EModLib VERSION 0.2 DESCRIPTION "Library for modeling emotions")
 
+find_package (Threads)
+
 # target_sources 
 set( SOURCES src/stimulus.cpp src/Affect.cpp src/Mood.cpp src/Personality.cpp src/Rock.cpp src/Gusher.cpp src/Empath.cpp src/Intellectual.cpp src/PeopleFactory.cpp src/EmotionsModelLib.cpp )
 set( HEADERS include/IAffect.h include/IPerson.h include/stimulus.h include/Affect.h include/Mood.h include/Personality.h include/Rock.h include/Gusher.h include/Empath.h include/Intellectual.h include/PeopleFactory.h include/EmotionsModelLib.h )
