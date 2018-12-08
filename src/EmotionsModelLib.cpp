@@ -51,7 +51,7 @@ void EmotionsModelLib::Start() {
 		mPersonAffectThreadList.push_back (std::thread (&IPerson::Run, person));
 	}
 
-	std::for_each(mPersonAffectThreadList.begin(), mPersonAffectThreadList.end(), std::mem_fn(&std::thread::join));
+	//std::for_each(mPersonAffectThreadList.begin(), mPersonAffectThreadList.end(), std::mem_fn(&std::thread::join));
 }
 
 void EmotionsModelLib::Stop() {

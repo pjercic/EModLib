@@ -50,14 +50,14 @@ public:
 			mArousal += lerpSlow(mArousal, affect->GetArousal(), mAffectAdjustmentFactor);
 			mValence += lerpSlow(mValence, affect->GetValence(), mAffectAdjustmentFactor);
 
-			mAffectiveObjectDriven->run(affect);
+			if (mAffectiveObjectDriven) mAffectiveObjectDriven->run(affect);
 		}
 		else
 		{
 			mArousal += lerpSlow(mArousal, GetArousal(), mAffectAdjustmentFactor);
 			mValence += lerpSlow(mValence, GetValence(), mAffectAdjustmentFactor);
 
-			mAffectiveObjectDriven->run(this);
+			if (mAffectiveObjectDriven) mAffectiveObjectDriven->run(this);
 		}
 	};
 
