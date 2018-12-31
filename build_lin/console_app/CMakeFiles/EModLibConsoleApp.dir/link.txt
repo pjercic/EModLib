@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/EModLibConsoleApp.dir/src/ConsoleApp.cpp.o  -o EModLibConsoleApp -Wl,-rpath,/home/petar/Development/EModLib/build_lin ../liblibEModLib.so 
