@@ -14,7 +14,7 @@ Rock::Rock() {
 
 	mLocation = 0;
 	mEmotionLabel = EmotionLabel::Happines;
-	mAffect = new Personality();
+	mAffect = new Personality(0.1);
 }
 
 } /* namespace EmotionsModel */

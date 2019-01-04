@@ -15,7 +15,7 @@ Gusher::Gusher() {
 
 	mLocation = 0;
 	mEmotionLabel = EmotionLabel::Fear;
-	mAffect = new Affect(0.9, new Personality());
+	mAffect = new Affect(0.9, new Personality(0.1));
 }
 
 } /* namespace EmotionsModel */

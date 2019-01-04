@@ -16,7 +16,7 @@ Empath::Empath() {
 
 	mLocation = 0;
 	mEmotionLabel = EmotionLabel::Sadness;
-	mAffect = new Affect(0.9, new Mood(0.5, new Personality()));
+	mAffect = new Affect(0.9, new Mood(0.5, new Personality(0.1)));
 }
 
 } /* namespace EmotionsModel */

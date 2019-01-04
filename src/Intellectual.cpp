@@ -16,7 +16,7 @@ Intellectual::Intellectual() {
 
 	mLocation = 0;
 	mEmotionLabel = EmotionLabel::Happines;
-	mAffect = new Mood(0.5, new Personality());
+	mAffect = new Mood(0.5, new Personality(0.1));
 
 }
 

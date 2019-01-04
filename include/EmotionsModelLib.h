@@ -32,8 +32,8 @@ class EmotionsModelLib {
 		virtual ~EmotionsModelLib() { for (auto person : mPersons) delete person;  };
 
 		void inStimulus(int persId, double arousal, double valence);
-		EmotionLabel getEmotion(int persId);
-		IAffect* getAffect(int persId);
+		EmotionLabel getEmotion(unsigned int persId);
+		IAffect* getAffect(unsigned int persId);
 		int createPerson(PersonLabel type); // implement if want to keep record of all persons
 		void Start();
 		void Stop();

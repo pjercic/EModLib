@@ -22,7 +22,7 @@ void EmotionsModelLib::inStimulus(int persId, double arousal, double valence) {
 	mPersons[persId]->inStimulus(new stimulus(arousal, valence));
 }
 
-EmotionLabel EmotionsModelLib::getEmotion(int persId) {
+EmotionLabel EmotionsModelLib::getEmotion(unsigned int persId) {
 
 	if (mPersons.empty() || persId > mPersons.size())
 		return EmotionLabel::None;
@@ -30,7 +30,7 @@ EmotionLabel EmotionsModelLib::getEmotion(int persId) {
 	return mPersons[persId]->getEmotion();
 }
 
-IAffect* EmotionsModelLib::getAffect(int persId) {
+IAffect* EmotionsModelLib::getAffect(unsigned int persId) {
 
 	if (mPersons.empty() || persId > mPersons.size())
 		return NULL;
