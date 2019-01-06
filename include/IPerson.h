@@ -26,7 +26,7 @@
 namespace EmotionsModel {
 
 // Affective circle start from 0 - think if more feasible to start from 1 and rotate the circle further
-enum EmotionLabel { Trust, Happines, Anticipation, Anger, Disgust, Sadness, Suprise, Fear, None };
+enum EmotionLabel { Trust = 0, Happines, Anticipation, Anger, Disgust, Sadness, Suprise, Fear, None };
 
 class IPerson {
 public:

@@ -14,6 +14,7 @@ class ConsoleApp {
 public:
 	EmotionsModel::EmotionsModelLib emotionModelObj;
 	std::vector<int> personsList;
+    bool mSimulationStarted;
 
 	ConsoleApp();
 	virtual ~ConsoleApp();	

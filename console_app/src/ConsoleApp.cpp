@@ -12,40 +12,65 @@ using namespace EmotionsModel;
 
 void CreatePerson(ConsoleApp& app)
 {
-	int nrPersons = 0;
-	std::cout << std::endl << "Chose how many:\n";
+	int nrPersons,type = 0;
+
+    std::cout << "IntellectualType - 0 " << std::endl;
+    std::cout << "EmpathType - 1" << std::endl;
+    std::cout << "RockType - 2" << std::endl;
+    std::cout << "GusherType - 3" << std::endl;
+    std::cout << "Choose personality type: ";
+    std::cin >> type;
+	std::cout << std::endl << "Chose how many: ";
 	std::cin >> nrPersons;
 
-	for (int i = 0; i < nrPersons; i++)
-	{
-		app.personsList.push_back(app.emotionModelObj.createPerson(PersonLabel::EmpathType));
+    std::cout << "Persons added from ID: " << app.personsList.empty() ? 0 : app.personsList.back();
+
+	for (unsigned int i = 0; i < nrPersons; i++)
+	{        
+		app.personsList.push_back(app.emotionModelObj.createPerson(static_cast<PersonLabel>(type)));
 	}
+
+    std::cout << " till ID: " << app.personsList.back();
 }
 
 void PrintPersons(ConsoleApp& app)
 {
+    std::cout << "ID" << "\tAr" << "\tVa" << "\tEm" << std::endl;
 	for (unsigned int i = 0; i < app.personsList.size(); i++)
 	{
-		std::cout << "PersonId: " << app.personsList[i] << "\tArousal: " << app.emotionModelObj.getAffect(app.personsList[i])->GetArousal() << "\tValence: " << app.emotionModelObj.getAffect(app.personsList[i])->GetArousal() << " Emotion: " << app.emotionModelObj.getEmotion(app.personsList[i]) << std::endl;
+		std::cout << app.personsList[i] << "\t" << app.emotionModelObj.getAffect(app.personsList[i])->GetArousal() << "\t" << app.emotionModelObj.getAffect(app.personsList[i])->GetArousal() << "\t" << app.emotionModelObj.getEmotion(app.personsList[i]) << std::endl;
 	}
 }
 
 void StimulatePersons(ConsoleApp& app)
 {
+    double x,y = 0.0;
+
+    std::cout << std::endl << "Define arousal: ";
+    std::cin >> x;
+    std::cout << std::endl << "Define valence: ";
+    std::cin >> y;
+
 	for (unsigned int i = 0; i < app.personsList.size(); i++)
 	{
-		app.emotionModelObj.inStimulus(app.personsList[i], 0.005, 0.005);
+		app.emotionModelObj.inStimulus(app.personsList[i], x, y);
 	}
+
+    std::cout << app.personsList.size() << " stimulated with " << "arousal: " << x << "valence: " << y << std::endl;
 }
 
 void StartSimulation(ConsoleApp& app)
 {
 	app.emotionModelObj.Start();
+    app.mSimulationStarted = true;
+    std::cout << "Simulation started." << std::endl;
 }
 
 void StopSimulation(ConsoleApp& app)
 {
 	app.emotionModelObj.Stop();
+    app.mSimulationStarted = false;
+    std::cout << "Simulation stopped." << std::endl;
 }
 
 int main () 
@@ -58,9 +83,9 @@ int main ()
 	do
 	{
 		std::cout << std::endl
-			<< " 1 - Create person\n"
-			<< " 2 - Print details for person.\n"
-			<< " 3 - Stimulate persons.\n"
+			<< " 1 - Create person(s)\n"
+			<< " 2 - Print details for persons.\n"
+			<< " 3 - Stimulate person(s).\n"
 			<< " 4 - Start simulation.\n"
 			<< " 5 - Stop simulation.\n"
 			<< " 6 - Exit program.\n"
@@ -85,6 +110,9 @@ int main ()
 			StopSimulation(app);
 			break;
 		case 6:
+            if (app.mSimulationStarted) 
+                StopSimulation(app);
+
 			std::cout << "End of Program.\n";
 			isRunnig = false;
 			break;
@@ -98,7 +126,7 @@ int main ()
 	return 0;
 }
 
-ConsoleApp::ConsoleApp() {
+ConsoleApp::ConsoleApp() : mSimulationStarted(false) {
 	// TODO Auto-generated constructor stub
 
 }

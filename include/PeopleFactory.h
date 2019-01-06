@@ -12,7 +12,7 @@
 
 namespace EmotionsModel {
 
-enum PersonLabel { IntellectualType, EmpathType, RockType, GusherType };
+enum PersonLabel { IntellectualType = 0, EmpathType, RockType, GusherType };
 
 class PeopleFactory {
 
