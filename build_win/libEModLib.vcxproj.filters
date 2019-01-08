@@ -1,84 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Petar Jercic\Desktop\EModLib\src\stimulus.cpp">
+    <ClCompile Include="C:\Users\Petar Jercic\Development\EModLib\src\stimulus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Petar Jercic\Desktop\EModLib\src\Affect.cpp">
+    <ClCompile Include="C:\Users\Petar Jercic\Development\EModLib\src\Affect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Petar Jercic\Desktop\EModLib\src\Mood.cpp">
+    <ClCompile Include="C:\Users\Petar Jercic\Development\EModLib\src\Mood.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Petar Jercic\Desktop\EModLib\src\Personality.cpp">
+    <ClCompile Include="C:\Users\Petar Jercic\Development\EModLib\src\Personality.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Petar Jercic\Desktop\EModLib\src\Rock.cpp">
+    <ClCompile Include="C:\Users\Petar Jercic\Development\EModLib\src\Rock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Petar Jercic\Desktop\EModLib\src\Gusher.cpp">
+    <ClCompile Include="C:\Users\Petar Jercic\Development\EModLib\src\Gusher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Petar Jercic\Desktop\EModLib\src\Empath.cpp">
+    <ClCompile Include="C:\Users\Petar Jercic\Development\EModLib\src\Empath.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Petar Jercic\Desktop\EModLib\src\Intellectual.cpp">
+    <ClCompile Include="C:\Users\Petar Jercic\Development\EModLib\src\Intellectual.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Petar Jercic\Desktop\EModLib\src\PeopleFactory.cpp">
+    <ClCompile Include="C:\Users\Petar Jercic\Development\EModLib\src\PeopleFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\Petar Jercic\Desktop\EModLib\src\EmotionsModelLib.cpp">
+    <ClCompile Include="C:\Users\Petar Jercic\Development\EModLib\src\EmotionsModelLib.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\IAffect.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\IAffect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\IPerson.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\IPerson.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\stimulus.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\stimulus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\Affect.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\Affect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\Mood.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\Mood.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\Personality.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\Personality.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\Rock.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\Rock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\Gusher.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\Gusher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\Empath.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\Empath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\Intellectual.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\Intellectual.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\PeopleFactory.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\PeopleFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Petar Jercic\Desktop\EModLib\include\EmotionsModelLib.h">
+    <ClInclude Include="C:\Users\Petar Jercic\Development\EModLib\include\EmotionsModelLib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Petar Jercic\Desktop\EModLib\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{D780BF53-36C5-3664-976E-32919DB2F503}</UniqueIdentifier>
+      <UniqueIdentifier>{92475798-A103-390A-A801-D66CE1EFCCFA}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{15E04EF8-A0CA-3028-839E-DEB2AF7D6230}</UniqueIdentifier>
+      <UniqueIdentifier>{29105D9C-6DA4-3EC0-BDD8-29A15B1F87C2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -18,4 +18,4 @@ Affective calculation is based on multi spring system physical modeling. Stimulu
 
 **OS:** Windows, Linux, OSX
 
-**Tooling:** CMake, Make, Qt5, Unity3D
+**Tooling:** CMake, Make, Qt5, Unity3D and Git (obviously)

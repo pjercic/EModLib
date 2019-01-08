@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\build_win\CMakeFiles\9f92635dcda230e076252ff9ef394ba1\googletest-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\build_win\CMakeFiles\9f92635dcda230e076252ff9ef394ba1\googletest-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\build_win\CMakeFiles\9f92635dcda230e076252ff9ef394ba1\googletest-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\build_win\CMakeFiles\9f92635dcda230e076252ff9ef394ba1\googletest-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\build_win\CMakeFiles\9f92635dcda230e076252ff9ef394ba1\googletest-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\build_win\CMakeFiles\9f92635dcda230e076252ff9ef394ba1\googletest-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\build_win\CMakeFiles\9f92635dcda230e076252ff9ef394ba1\googletest-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\build_win\CMakeFiles\2a507a54f873192847d909ca52015e35\googletest-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\build_win\CMakeFiles\d0b4f56047e0364551aae1af47068733\googletest.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Petar Jercic\Development\EModLib\test\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Petar Jercic\Development\EModLib\build_win\test\CMakeFiles\googletest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{65EA2922-9B84-3A7C-93F4-250B3EC116B5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
