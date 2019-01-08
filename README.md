@@ -6,7 +6,7 @@ This is a C++11 library that models human emotions.
 
 If we want to make technology for humans, it needs to have human-like features, so it is easier for humans to understand. Emotions are one such feature.
 
-## Nmenclature
+## Nomenclature
 
 **Affect** is the core of human emotions and it consists of *arousal and valence dimensions*. Humans percieve theis emotions based on their *duration*: **short-term affect, long-term mood and life-long personality**. Each human fits into a different **personality type**. Human emotional state is changed through **stimulus**.
 
@@ -35,7 +35,7 @@ Affective calculation is based on multi spring system physical modeling. Stimulu
 
 **Platforms:** Windows, Linux, OSX
 
-**Tooling:** CMake, Make, Qt5, Unity3D, GTest
+**Tooling:** CMake, Make, Qt5, Unity3D, GTest and Git (obviously)
 
 ## Requirements
 
