@@ -25,7 +25,8 @@ Affective calculation is based on multi spring system physical modeling. Stimulu
 
 ## Build
 
-Enter the desired build folder for your OS and use > cmake ../
+Enter the desired build folder for your OS and use **> cmake ../**
+
 Alternatively, you can use already built makefiles in the build OS folder to compile the code.
 
 ## Applications
