@@ -23,6 +23,11 @@ Affective calculation is based on multi spring system physical modeling. Stimulu
 - Create a number of Persons with differnt presonality types
 - Retrieve current emotional state
 
+## Build
+
+Enter the desired build folder for your OS and use > cmake ../
+Alternatively, you can use already built makefiles in the build OS folder to compile the code.
+
 ## Applications
 
 * Console Application
