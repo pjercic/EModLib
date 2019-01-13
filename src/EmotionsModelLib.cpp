@@ -10,6 +10,43 @@
 
 #include <algorithm>
 
+EmotionsModel::EmotionsModelLib* gEModLib = nullptr;
+
+// Enternal Unmanaged API
+extern "C"
+{
+    __declspec (dllexport) void Instantiate()
+    {
+        if (!gEModLib)
+            gEModLib = new EmotionsModel::EmotionsModelLib();
+    }
+
+    __declspec (dllexport) void inStimulus(int persId, double arousal, double valence)
+    {
+        gEModLib->inStimulus(persId, arousal, valence);
+    }
+
+    __declspec (dllexport) int getEmotion(unsigned int persId)
+    {
+        return gEModLib->getEmotion(persId);
+    }
+
+    __declspec (dllexport) int createPerson(int type)
+    {
+        return gEModLib->createPerson(static_cast<EmotionsModel::PersonLabel>(type));
+    }
+
+    __declspec (dllexport) void Start()
+    {
+        return gEModLib->Start();
+    }
+
+    __declspec (dllexport) void Stop()
+    {
+        return gEModLib->Stop();
+    }
+}
+
 namespace EmotionsModel {
 
 EmotionsModelLib::EmotionsModelLib() {
