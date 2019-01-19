@@ -2,6 +2,12 @@
 # C:\tmp\CMakeSubTest\build>"c:\Program Files\CMake\bin\cmake" ..\
 # C:\tmp\CMakeSubTest\build>"c:\Program Files\CMake\bin\cmake" --build %CD%
 
+# x64 - use cmake path -A x64
+# https://gitlab.kitware.com/cmake/cmake/issues/17451
+# http://www.saoe.net/blog/778/
+# https://github.com/luarocks/luarocks/issues/382
+
+
 cmake_minimum_required(VERSION 3.0.0)
 cmake_minimum_required(VERSION 3.10)
 project(EModLib VERSION 0.2 DESCRIPTION "Library for modeling emotions")
@@ -28,6 +34,7 @@ set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 add_library(libEModLib SHARED ${SOURCES} ${HEADERS} )
 ADD_SUBDIRECTORY( console_app )
 ADD_SUBDIRECTORY( test )
+#ADD_SUBDIRECTORY( gui_app )
 
 # If you work with subdirectories, it is not very convenient to include relative path like "../include/mylib.h". So, pass top directory in included directories:
 target_include_directories(libEModLib PRIVATE include)
