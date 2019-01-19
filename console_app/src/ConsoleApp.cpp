@@ -12,7 +12,8 @@ using namespace EmotionsModel;
 
 void CreatePerson(ConsoleApp& app)
 {
-	int nrPersons,type = 0;
+    unsigned int nrPersons = 0;
+    int type = 0;
 
     std::cout << "IntellectualType - 0 " << std::endl;
     std::cout << "EmpathType - 1" << std::endl;

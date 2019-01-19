@@ -18,4 +18,3 @@ stimulus::stimulus(double arousal, double valence) {
 stimulus::~stimulus() {
 	// TODO Auto-generated destructor stub
 }
-

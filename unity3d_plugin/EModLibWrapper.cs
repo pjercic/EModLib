@@ -30,6 +30,12 @@ public class EModLibWrapper
     private static extern int getEmotion(int persId);
 
     [DllImport(dll)]
+    private static extern double getArousal(int persId);
+
+    [DllImport(dll)]
+    private static extern double getValence(int persId);
+
+    [DllImport(dll)]
     private static extern int createPerson(int type);
 
     [DllImport(dll)]
@@ -56,6 +62,24 @@ public class EModLibWrapper
     {
 #if (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_STANDALONE_LIN)
         return getEmotion(persId);
+#else
+        return -1;
+#endif
+    }
+
+    public static double getArousalEx(int persId)
+    {
+#if (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_STANDALONE_LIN)
+        return getArousal(persId);
+#else
+        return -1;
+#endif
+    }
+
+    public static double getValenceEx(int persId)
+    {
+#if (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_STANDALONE_LIN)
+        return getValence(persId);
 #else
         return -1;
 #endif

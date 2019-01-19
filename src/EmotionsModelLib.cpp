@@ -31,6 +31,16 @@ extern "C"
         return gEModLib->getEmotion(persId);
     }
 
+    __declspec (dllexport) double getArousal(unsigned int persId)
+    {
+        return gEModLib->getAffect(persId)->GetArousal();
+    }
+
+    __declspec (dllexport) double getValence(unsigned int persId)
+    {
+        return gEModLib->getAffect(persId)->GetValence();
+    }
+
     __declspec (dllexport) int createPerson(int type)
     {
         return gEModLib->createPerson(static_cast<EmotionsModel::PersonLabel>(type));
@@ -78,7 +88,7 @@ IAffect* EmotionsModelLib::getAffect(unsigned int persId) {
 int EmotionsModelLib::createPerson(PersonLabel type) {
 
 	mPersons.push_back(PeopleFactory::getPerson(type));
-	return mPersons.size() - 1;
+	return int(mPersons.size() - 1);
 }
 
 void EmotionsModelLib::Start() {
