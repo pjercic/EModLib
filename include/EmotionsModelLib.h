@@ -20,7 +20,12 @@ namespace EmotionsModel {
 
 // factory
 // distance changed listener event
-
+// possible to use arrays
+//extern "C" {
+//    __declspec(dllexport) float TestMultiply(float a, float b);
+//    __declspec(dllexport) float TestDivide(float a, float b);
+//}
+	
 class EmotionsModelLib {
 
 	private:
